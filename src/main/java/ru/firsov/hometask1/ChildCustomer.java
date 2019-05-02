@@ -14,6 +14,7 @@ public class ChildCustomer implements ICustomer{
 
     public int getAge() {
         return age;
+
     }
 
     public String getDisease() {
