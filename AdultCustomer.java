@@ -23,6 +23,7 @@ public class AdultCustomer implements ICustomer{
 
     public int getAge() {
         return age;
+
     }
 
     public String getDisease() {
