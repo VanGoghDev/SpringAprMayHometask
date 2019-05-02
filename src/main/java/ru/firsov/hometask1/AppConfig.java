@@ -14,7 +14,8 @@ public class AppConfig {
 
     @Bean(name="adultCustomer")
     public AdultCustomer adultCustomer(@Value("29") String age, @Value("gastritis") String disease) {
-        return new AdultCustomer(age, disease);
+        AdultCustomer adultCustomer = new AdultCustomer(age, disease);
+        return adultCustomer;
     }
 
     @Bean(name="hospital")
