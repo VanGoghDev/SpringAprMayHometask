@@ -22,5 +22,6 @@ public class AppConfig {
         IHospital hospital = new HospitalImpl();
         hospital.setCustomer(customer);
         return hospital;
+
     }
 }
