@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 @Component("hospital")
 public class HospitalImpl implements IHospital{
 
-    @Autowired(required = false)
-    @Qualifier("adultCustomer")
+    //@Autowired(required = false)
+    //@Qualifier("adultCustomer")
     private ICustomer customer;
 
     public void sayCabinet() {
@@ -20,6 +20,7 @@ public class HospitalImpl implements IHospital{
             System.out.println("Cabinet of gastroenterologist number 3");
     }
 
+    @Autowired(required = false)
     public void setCustomer(ICustomer customer) {
         this.customer = customer;
     }
