@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       <context:component-scan base-package="ru.firsov.hometask1"/>
+    <!--for xml realization-->
+    <!--<bean id="hospital" class="ru.firsov.hometask1.HospitalImpl">
+        <property name="customer">
+            <bean class="ru.firsov.hometask1.ChildCustomer"/>
+        </property>
+    </bean>-->
+
+    <bean id="hospital" class="ru.firsov.hometask1.HospitalImpl">
+        <property name="customer" ref="adultCustomer"/>
+    </bean>
+
+    <bean id="adultCustomer" class="ru.firsov.hometask1.AdultCustomer">
+        <!--<constructor-arg index="0" value="29"/>
+        <constructor-arg index="1" value="gastritis"/>-->
+        <property name="age" value="29"/>
+        <property name="disease" value="gastritis"/>
+    </bean>
+
+    <!--Using annotations-->
+   <!--<bean id="hospital" class="ru.firsov.hometask1.HospitalImpl">
+       <property name="customer" ref="childCustomer"/>
+   </bean>
+-->
+</beans>
