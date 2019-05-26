@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add book</title>
+</head>
+<body>
+<form action="#" th:action="@{element/save" th:object="${book}" method="post">
+    <p>Book id: <input type="text" th:field="{book.id}"></p>
+    <p>Book title: <input type="text" th:field="{book.title}"></p>
+    <p>Description: <input type="text" th:field="*{description}" /></p>
+    <p>Issue date: <input type="date" th:field="{book.yearOfPublishing}" /></p>
+</form>
+</body>
+</html>

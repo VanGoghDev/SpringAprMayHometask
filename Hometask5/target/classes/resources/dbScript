@@ -1,0 +1,14 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS students;
+
+CREATE TABLE books (
+    id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(100) DEFAULT NULL,
+    description VARCHAR(400) DEFAULT NULL,
+    yearOfPublishing INT(11) NOT NULL,
+    PRIMARY KEY(id)
+) ENGINE=InnoDB CHARSET=utf8;
+
+INSERT INTO books (id, title, description, yearOfPublishing)
+VALUES (1, "Lord of the Rings", "a long story", 1954);
